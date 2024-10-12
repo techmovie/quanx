@@ -9,7 +9,8 @@ if(url.includes("bbsallapi/lego/data")){
   })
 }else if(url.includes("news/v3/tab")){
   obj.result = obj.result.filter(tab=>{
-    !tab.name.match(/球星雷达|英雄/i)
+    !tab.name.match(/英雄/i)
   })
 }
+console.log(JSON.stringify(obj));
 $done({body: JSON.stringify(obj)})
