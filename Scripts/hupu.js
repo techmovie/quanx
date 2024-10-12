@@ -12,7 +12,7 @@ if(url.includes("bbsallapi/lego/data")){
     return !tab.name.match(/球星|英雄/)
   })
 }else if(url.includes("matchallapi/liveTabList")){
-  obj.result = obj.result.filter(tab=>{
+  obj.result = obj.categoryList.filter(tab=>{
     return !tab.categoryName.match(/游戏|预测/)
   })
 }
