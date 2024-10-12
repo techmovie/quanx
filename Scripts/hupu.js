@@ -11,6 +11,10 @@ if(url.includes("bbsallapi/lego/data")){
   obj.result = obj.result.filter(tab=>{
     return !tab.name.match(/球星|英雄/)
   })
+}else if(url.includes("matchallapi/liveTabList")){
+  obj.result = obj.result.filter(tab=>{
+    return !tab.categoryName.match(/游戏|预测/)
+  })
 }
 console.log(JSON.stringify(obj));
 $done({body: JSON.stringify(obj)})
