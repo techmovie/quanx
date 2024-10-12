@@ -17,12 +17,14 @@ if(url.includes("bbsallapi/lego/data")){
   })
 }else if(url.includes("standard/getTabDetailScheduleList")){
   obj.result.dayGameData = obj.result.dayGameData.map(day=>{
-    return {
-      ...day,
-      matchData: {
+     day.matchData = day.matchData.map(game=>{
+      return {
         ...matchData,
         extraInfo: {}
       }
+    })
+    return {
+      ...day
     }
   })
 }
