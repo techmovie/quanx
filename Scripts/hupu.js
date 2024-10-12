@@ -19,7 +19,7 @@ if(url.includes("bbsallapi/lego/data")){
   obj.result.dayGameData = obj.result.dayGameData.map(day=>{
      day.matchData = day.matchData.map(game=>{
       return {
-        ...matchData,
+        ...game,
         extraInfo: {}
       }
     })
