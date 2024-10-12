@@ -8,7 +8,7 @@ if(url.includes("bbsallapi/lego/data")){
     !card.code.match(/advertisement|multiIcon/i)
   })
 }else if(url.includes("news/v3/tab")){
-  obj.data.result = obj.data.result.filter(tab=>{
+  obj.result = obj.result.filter(tab=>{
     !tab.name.match(/球星雷达|英雄/i)
   })
 }
