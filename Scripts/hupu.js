@@ -15,6 +15,16 @@ if(url.includes("bbsallapi/lego/data")){
   obj.result.categoryList = obj.result.categoryList.filter(tab=>{
     return !tab.categoryName.match(/游戏|预测/)
   })
+}else if(url.includes("standard/getTabDetailScheduleList")){
+  obj.result.dayGameData = obj.result.dayGameData.map(day=>{
+    return {
+      ...day,
+      matchData: {
+        ...matchData,
+        extraInfo: {}
+      }
+    }
+  })
 }
 console.log(JSON.stringify(obj));
 $done({body: JSON.stringify(obj)})
