@@ -27,6 +27,11 @@ if(url.includes("bbsallapi/lego/data")){
       ...day
     }
   })
+}else if(url.includes("device/v1/init")){
+  obj.result.activityNav = [];
+  obj.result.ipLocation = '英国';
 }
 console.log(JSON.stringify(obj));
 $done({body: JSON.stringify(obj)})
+
+//https://games.mobileapi.hupu.com/3/8.0.88/bplapi/device/v1/init
