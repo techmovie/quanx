@@ -9,7 +9,7 @@ if(url.includes("bbsallapi/lego/data")){
   })
 }else if(url.includes("news/v3/tab")){
   obj.result = obj.result.filter(tab=>{
-    return !tab.name.match(/球星|英雄/)
+    return tab.name.match(/赛程|数据|主队/)
   })
 }else if(url.includes("matchallapi/liveTabList")){
   obj.result.categoryList = obj.result.categoryList.filter(tab=>{
